@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 using UniversityRegistry.Data;
 
 namespace UniversityRegistry.UI
@@ -24,7 +25,7 @@ namespace UniversityRegistry.UI
             InitializeComponent();
 
             // Initializes the list of university people
-            var people = new List<Person>()
+            var people = new ObservableCollection<Person>()
             {
                 new Person(){FirstName="Mother", LastName="Goose", DateOfBirth=new DateTime(1843, 10, 20), Role=Role.Faculty, Active=false},
                 new Person(){FirstName="Peter", LastName="Pumpkineater", DateOfBirth=new DateTime(1966, 3, 15), Role=Role.Faculty, Active=true},
