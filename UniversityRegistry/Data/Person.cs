@@ -51,5 +51,14 @@ namespace UniversityRegistry.Data
         {
             ID = NextID++;
         }
+
+        /// <summary>
+        /// Returns a string identifying the person
+        /// </summary>
+        /// <returns>A string consisting of last name, first name, and ID</returns>
+        public override string ToString()
+        {
+            return $"{LastName}, {FirstName} [{ID}]";
+        }
     }
 }
